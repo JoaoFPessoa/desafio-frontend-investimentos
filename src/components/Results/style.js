@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   margin-left: 2.5rem;
-  width: 55%;
+  width: 65%;
   margin-right: 1.3rem;
   @media (max-width: 768px) {
-    margin: auto;
     width: 100%;
   }
 `;
@@ -16,8 +15,14 @@ export const Title = styled.h2`
   }
 `;
 export const ResultsContainer = styled.div`
-  width: 100%;
+width: 700px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media(max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 `;

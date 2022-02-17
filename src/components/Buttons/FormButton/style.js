@@ -22,6 +22,11 @@ export const FormButton = styled.button`
   background: ${(props) => (props.selected === true ? "#d88147" : "none")};
   color: ${(props) => (props.selected === true ? "white" : "none")};
 
+  @media(max-width: 768px){
+    width: 30%;
+    font-size: 0.8rem;
+  }
+
   &:hover {
     background: #d88147;
     color: white;

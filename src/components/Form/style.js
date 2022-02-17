@@ -5,8 +5,9 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   @media (max-width: 768px) {
-    margin: auto;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
   }
 `;
 
@@ -52,6 +53,14 @@ export const SubmitContainer = styled.div`
   margin-top: 2rem;
   justify-content: space-between;
   @media (max-width: 768px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
+
+export const ResultsContainer = styled.div`
+align-items: center;
+display: flex;
+flex-direction: column;
+`

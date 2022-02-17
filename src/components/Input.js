@@ -9,6 +9,9 @@ export default styled.input`
   border-bottom: 1px solid black;
   font-size: 1.2rem;
   width: 13.75rem;
+  @media(max-width: 768px){
+    width: 100%;
+  }
 
   ${({ error }) =>
     error &&

@@ -14,7 +14,7 @@ export const SubmitButtonStyle = styled.button`
   background-color: ${(props) =>
     props.disabled === true ? "grey" : "#D88147"};
   @media (max-width: 768px) {
-    width: 65%;
+    width: 100%;
     margin-bottom: 1rem;
   }
 `;
@@ -31,7 +31,7 @@ export const CleanDataButtonStyle = styled.button`
   font-weight: bold;
   border-radius: 7px;
   @media (max-width: 768px) {
-    width: 65%;
+    width: 100%;
     margin-bottom: 1rem;
   }
   &:hover {

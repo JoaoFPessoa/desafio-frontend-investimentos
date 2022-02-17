@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "../Buttons/FormButton";
 import SubmitButton, { CleanDataButton } from "../Buttons/HandleFormButton";
+import BarChart from "../Chart";
 import FormGroup from "../FormGroup";
 import useErrors from "../Hooks/useErrors";
 import Input from "../Input";
@@ -9,9 +10,11 @@ import isNumber from "../utils/isNumber";
 import {
   ButtonsContainer,
   Container,
+  FlexRow,
   FormContainer,
   InputsContainer,
   Option,
+  ResultsContainer,
   SubmitContainer,
   Title,
 } from "./style";
@@ -49,10 +52,18 @@ export default function Form() {
       });
   }, []);
 
-  //handlers
+  //Submit & Clean Data handlers
   function handleSubmit(event) {
     event.preventDefault();
     setOpenResults(true);
+  }
+  function handleCleanFields(){
+    setTipoRendimento("");
+    setTipoIndexacao("");
+    setInitialAport("");
+    setMonthlyAport("");
+    setTerm("");
+    setRentability("");
   }
   const isValid =
     tipoRendimento &&
@@ -63,7 +74,7 @@ export default function Form() {
     rentability &&
     errors.length === 0;
 
-  // Funções para validação de dados do formulário
+  // Validate form data handlers
 
   function handleInitialAportChange(event) {
     setInitialAport(event.target.value);
@@ -165,8 +176,6 @@ export default function Form() {
     setIpcaIndexacao(true);
     setTipoIndexacao("ipca");
   }
-
-  console.log(indicadores);
   return (
     <Container>
       <FormContainer onSubmit={handleSubmit}>
@@ -201,7 +210,7 @@ export default function Form() {
                 type="button"
                 borderChoice="left"
                 onClick={handleTipoIndexacaoPre}
-                tipoIndexacao={preIndexacao}
+                selected={preIndexacao}
                 value={tipoIndexacao}
               />
               <Button
@@ -232,6 +241,7 @@ export default function Form() {
                 name="Aporte Inicial"
                 onChange={handleInitialAportChange}
                 error={getErrorMessageByFieldName("initialAport")}
+                value={initialAport}
               />
             </FormGroup>
 
@@ -243,6 +253,7 @@ export default function Form() {
                 name="Prazo"
                 onChange={handleTermChange}
                 error={getErrorMessageByFieldName("term")}
+                value={term}
               />
             </FormGroup>
 
@@ -259,6 +270,7 @@ export default function Form() {
                 name="AporteMensal"
                 onChange={handleMonthlyAportChange}
                 error={getErrorMessageByFieldName("monthlyAport")}
+                value={monthlyAport}
               />
             </FormGroup>
 
@@ -270,6 +282,7 @@ export default function Form() {
                 name="Rentabilidade"
                 onChange={handleRentabilityChange}
                 error={getErrorMessageByFieldName("rentability")}
+                value={rentability}
               />
             </FormGroup>
 
@@ -279,7 +292,9 @@ export default function Form() {
           </div>
         </InputsContainer>
         <SubmitContainer>
-          <CleanDataButton title="Limpar Campos" type="button" />
+          <CleanDataButton title="Limpar Campos" 
+          type="button" 
+          onClick={handleCleanFields} />
           <SubmitButton
             title="Simular"
             type="button"

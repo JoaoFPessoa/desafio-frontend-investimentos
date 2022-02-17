@@ -8,7 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
         background-color: hsl(0, 0%, 90%);
         @media(max-width:768px){
-            margin-left: 20px;
         }
     }
 `

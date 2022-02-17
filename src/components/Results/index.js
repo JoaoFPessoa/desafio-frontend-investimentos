@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BarChart from "../Chart";
 import { Container, ResultsContainer, Title } from "./style";
 import ValueBox from "./ValueBox";
 
@@ -58,7 +59,9 @@ export default function Results({
             title="Ganho Líquido"
             value={"R$" + simulacoes[0]?.ganhoLiquido}
           />
+           <BarChart />
         </ResultsContainer>
+       
       </Container>
     );
   }
