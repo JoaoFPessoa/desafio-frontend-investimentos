@@ -2,14 +2,6 @@
 <p align="center" id="sobre">Desafio técnico de frontend proposto pela EQI investimentos. Trata-se 
 de um simulador de investimentos, com a exibição de resultados contendo um gráfico e inputs
 com valores que variam de acordo com as escolhas do usuário. </p>
-Tabela de conteúdos
-=================
-<!--ts-->
-    * [Sobre](#Sobre)
-    * [Instalação](#instalacao)
-    * [Pre Requisitos](#pre-requisitos)
-    * [Tecnologias](#tecnologias)
-<!--te-->
 
 ### Features
 
@@ -62,15 +54,20 @@ $ yarn start
 # A aplicação inciará na porta:3006
 ```
 
-### 🛠 Tecnologias
+### 🛠 Ferramentes
 <p id="tecnologias"></p>
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
-- [Styled Components](https://styled-components.com/)
-- [Apex Charts](https://apexcharts.com/)
-- [Axios](https://axios-http.com/docs/intro)
+- [Styled Components](https://styled-components.com/) - Considero o styled a melhor forma para
+tratar estilos no React, pois evita duplicidade em classes e tags, e traz grande dinamicidade
+para os estilos através de props e temas globais.
+- [Apex Charts](https://apexcharts.com/) - Utilizado para construção do gráfico.
+- [Axios](https://axios-http.com/docs/intro) - Utilizado para requests entre o front e o backend
+Ferramentas adcionais:
+- [ESlint]
+- [Prettier]
 
 ### Screenshots
 <h1 align="center">
