@@ -10,6 +10,8 @@ export default function Results({
   onClick,
 }) {
   const [simulacoes, setSimulacoes] = useState([]);
+  const [comAporte, setComAporte] = useState([]);
+  const [semAporte, setSemAporte] = useState([]);
   //getSimulacoes
   useEffect(() => {
     fetch(
@@ -23,6 +25,14 @@ export default function Results({
         const json = await response.json();
         setSimulacoes(json);
         console.log(response);
+        //Consts to pass the response object to array, and transform values to have only 2 cases after "."
+        const semAporteToObject = (Object.values(json[0].graficoValores.semAporte))
+        const semAporteToFixed =  semAporteToObject?.map(function(semAporte){return Number(semAporte.toFixed(1))})
+        const comAporteToObject = (Object.values(json[0].graficoValores.comAporte))
+        const comAporteToFixed =  comAporteToObject?.map(function(comAporte){return Number(comAporte.toFixed(1))})
+        setComAporte(comAporteToFixed )
+        setSemAporte(semAporteToFixed)
+        console.log(comAporte )
       })
       .catch((error) => {
         console.log(error);
@@ -59,7 +69,9 @@ export default function Results({
             title="Ganho Líquido"
             value={"R$" + simulacoes[0]?.ganhoLiquido}
           />
-           <BarChart />
+           <BarChart
+           comAporte = {comAporte}
+           semAporte = {semAporte}/>
         </ResultsContainer>
        
       </Container>

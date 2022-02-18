@@ -13,17 +13,18 @@ const options = {
     dataLabels: {
         enabled: false
     },
+    labels: {
+      enabled: false
+    },
     xaxis: {
         categories: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
       },
       colors: [ '#000000', 'rgb(216, 129, 71)'
     ],
     yaxis: {
-        labels: {
-            style: {
-              width: '45px'
-            },
-          }
+      texts: {
+        enabled: false
+      }
     },
     responsive: [{
       breakpoint: '768px',
@@ -32,13 +33,14 @@ const options = {
 }
 
 
-export default function BarChart({comAporte}){
+export default function BarChart({comAporte, semAporte}){
+  console.log(comAporte)
   const series =[{
     name: 'Sem aporte',
-    data: [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+    data: semAporte ? semAporte : [],
   }, {
     name: 'Com Aporte',
-    data: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    data: comAporte ? comAporte : [],
   }]
     return (
         <Container>
