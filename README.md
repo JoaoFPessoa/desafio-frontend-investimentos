@@ -1,5 +1,5 @@
 <h1 align="center">DESAFIO FRONTEND EQI INVESTIMENTOS</h1>
-<p align="center" id="sobre">Desafio técnico de frontend proposto pela EQI investimentos. Trata-se 
+<p align="center" >Desafio técnico de frontend proposto pela EQI investimentos. Trata-se 
 de um simulador de investimentos, com a exibição de resultados contendo um gráfico e inputs
 com valores que variam de acordo com as escolhas do usuário. </p>
 
@@ -11,7 +11,7 @@ com valores que variam de acordo com as escolhas do usuário. </p>
 
 ### Pré-requisitos 
 
-<p id="pre-requisitos">Antes de começar, você vai precisar ter instalado em sua máquina a
+<p>Antes de começar, você vai precisar ter instalado em sua máquina a
 ferramenta: 
 [Node.js](https://nodejs.org/en/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
@@ -19,7 +19,6 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 <p>Primeiramente terá de rodar o servidor no back-end</p>
 
 ### Instalação
-<p id="instalacao"></p>
 ### 🎲 Rodando o Back End (servidor)
 
 ```bash
@@ -35,14 +34,14 @@ $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npx json-server db.json
 
-# O servidor inciará na porta:3000
+# O servidor iniciará na porta:3000
 ```
 ### 🎲 Rodando o Projeto
 ```bash
-# Clone o projeto em outra pasta
+# Clone o projeto
 $ git clone <https://github.com/JoaoFPessoa/desafio-frontend-investimentos>
 
-# Acesse a pasta clonada do projeto em
+# Acesse a pasta do projeto
 $ cd desafio-frontend-investimentos
 
 # Instale as dependências
@@ -51,11 +50,10 @@ $ yarn
 # Execute o projeto
 $ yarn start
 
-# A aplicação inciará na porta:3006
+# A aplicação iniciará na porta:3006 e abrirá automaticamente no seu browser
 ```
 
 ### 🛠 Ferramentes
-<p id="tecnologias"></p>
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
@@ -65,8 +63,7 @@ tratar estilos no React, pois evita duplicidade em classes e tags, e traz grande
 para os estilos através de props e temas globais.
 - [Apex Charts](https://apexcharts.com/) - Utilizado para construção do gráfico.
 - [Axios](https://axios-http.com/docs/intro) - Utilizado para requests entre o front e o backend
-Ferramentas adcionais:
-- [ESlint]
+- [ESlint] - Junto com o prettier, faz com que seu código siga padrões e torne-se mais legível.
 - [Prettier]
 
 ### Screenshots
@@ -74,7 +71,7 @@ Ferramentas adcionais:
   <img alt="Home" title="#Home" src="./public/screenshots/Screenshot1.png" />
   <img alt="FormValidate" title="#FormValidate" 
   src="./public/screenshots/FormValidate_Screenshot.png" />
-  <img alt="Results" title="#Results" src="./public/screenshots/Results_Screenshot.png" />
-  <img alt="Mobile" title="#Mobile" src="./public/screenshots/Mobile1.png" />
+  <img alt="Results" title="#Results" src="./public/screenshots/Results.png" />
+  <img alt="Mobile" title="#Mobile" src="./public/screenshots/MobileChart.png" />
   <img alt="Mobile2" title="#Mobile2" src="./public/screenshots/Mobile2.png" />
 </h1>
