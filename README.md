@@ -53,7 +53,7 @@ $ yarn start
 # A aplicação iniciará na porta:3006 e abrirá automaticamente no seu browser
 ```
 
-### 🛠 Ferramentes
+### 🛠 Ferramentas e Dependências
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
@@ -62,7 +62,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 tratar estilos no React, pois evita duplicidade em classes e tags, e traz grande dinamicidade
 para os estilos através de props e temas globais.
 - [Apex Charts](https://apexcharts.com/) - Utilizado para construção do gráfico.
-- [Axios](https://axios-http.com/docs/intro) - Utilizado para requests entre o front e o backend
+- [Fetch] - Utilizado para requests entre o front e o backend
 - [ESlint] - Junto com o prettier, faz com que seu código siga padrões e torne-se mais legível.
 - [Prettier]
 
